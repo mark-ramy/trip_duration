@@ -22,3 +22,6 @@ Thumbs.db
 # Prediction outputs (private/local only)
 val_predictions.csv
 test_predictions.csv
+
+# Artifacts (models, reports, logs, etc.)
+artifacts/
