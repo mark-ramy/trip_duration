@@ -1,11 +1,5 @@
 """
 Train and save the project's models on the processed training data.
-
-Ridge(alpha=1) remains the project's OFFICIAL model, as specified in the
-assignment ("We will fix the model to Ridge, and fix its alpha to 1").
-XGBoost is trained alongside it purely as a comparison model (use
---models ridge to skip it if you only want the official model).
-
 Pipeline
 --------
 1. Load the processed train.csv produced by build_processed_train.py
