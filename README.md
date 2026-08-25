@@ -81,6 +81,24 @@ python generate_report.py --artifacts-dir artifacts --out report.pdf
   processing (see `features/main.py::run_changes`).
 - Current training-split metrics are in `artifacts/metrics.json`.
 
+## Results
+
+All metrics are computed on the log1p-transformed target.
+
+| Split | Model   | RMSE   | MAE    | R²     | n_rows  |
+|-------|---------|--------|--------|--------|---------|
+| Train | Ridge   | 0.4350 | 0.3292 | 0.6667 | 993,553 |
+| Train | XGBoost | 0.2962 | 0.2134 | 0.8454 | 993,553 |
+| Val   | Ridge   | 0.4951 | 0.3433 | 0.6158 | 229,182 |
+| Val   | XGBoost | 0.4037 | 0.2363 | 0.7446 | 229,182 |
+| Test  | Ridge   | 0.4904 | 0.3424 | 0.6192 | 229,144 |
+| Test  | XGBoost | 0.4008 | 0.2362 | 0.7456 | 229,144 |
+
+XGBoost outperforms Ridge on every split and metric, but Ridge remains the
+official model for this assignment per the spec. Val/test scores for both
+models track closely with their train-split numbers, suggesting neither model
+is overfitting substantially.
+
 ## Data
 
 Raw NYC taxi trip data, weather, and OSRM routing files are not included in
