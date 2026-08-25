@@ -2,13 +2,6 @@
 Load the saved model(s) — Ridge(alpha=1) and/or XGBoost — and run them on
 a sample/val/test csv.
 
-Per the assignment: "You are allowed to only test once and report your
-test-score." This script does not enforce that (it's a one-time human
-process rule, not something to hard-block in code), but it prints a
-reminder every run and writes a timestamped log line to
-artifacts/test_runs.log so you have a record of exactly when you spent
-your one official run on the real test set.
-
 The input csv is expected in the RAW schema (same columns as train.csv,
 minus/optionally including trip_duration) — this script runs it through
 the exact same features/main.py::run_changes(is_train=False) pipeline,
